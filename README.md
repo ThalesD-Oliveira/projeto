@@ -15,5 +15,5 @@
 - [x] Uso de cores gradientes no texto
 
 ## Link
-[https://atracoes-beto-carrero.netlify.app/](https://atracoes-beto-carrero.netlify.app/)
+[[https://atracoes-beto-carrero.netlify.app/](http://beto-carrero-atracoes.netlify.app/)]([https://atracoes-beto-carrero.netlify.app/](http://beto-carrero-atracoes.netlify.app/))
 
