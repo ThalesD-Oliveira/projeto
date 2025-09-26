@@ -1,0 +1,56 @@
+const members = [
+  { name: 'Super Soaker Splash', id: 'peter' },
+  { name: 'Firewhip', id: 'gamora' },
+  { name: 'Portal da escuridão', id: 'drax' },
+  { name: 'Big Tower', id: 'mantis' },
+  { name: 'Star Mountain', id: 'rocket' },
+  { name: 'Excalibur', id: 'groot' },
+]
+
+let activeMember = 0
+const images = document.getElementById('images')
+const menu = document.getElementById('menu')
+const navigation = document.getElementById('navigation')
+const memberName = document.getElementById('member__name')
+
+function changeStatusButton() {
+  const prev = document.getElementById('button__prev')
+  const isFirst = activeMember === 0
+  prev.disabled = isFirst
+
+  const next = document.getElementById('button__next')
+  isLast = activeMember === members.length - 1
+  next.disabled = isLast
+}
+
+function changeMember(memberId) {
+  activeMember = memberId
+  const member = members[activeMember]
+
+  images.style.transform = `translateY(${-100 * activeMember}vh)`
+  memberName.classList = member.id
+  
+  changeName(member.name)
+  changeStatusButton()
+}
+
+function navigationMember(direction) {
+   activeMember = activeMember + direction
+  const member = members[activeMember]
+
+  images.style.transform = `translateY(${-100 * activeMember}vh)`
+  memberName.classList = member.id
+  
+  changeName(member.name)
+  changeStatusButton()
+}
+
+function changeMenu() {
+  menu.classList.toggle('active')
+  navigation.classList.toggle('active')
+}
+
+function setMember(memberId) {
+  changeMember(memberId)
+  changeMenu()
+}
